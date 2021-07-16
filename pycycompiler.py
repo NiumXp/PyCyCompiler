@@ -23,5 +23,6 @@ os.system(f"cython -3 {script} --embed")
 print(f"\033[1;4;32;40mCYTHON MODULE COMPILED {script}, SUCCESSFULLY!\033[m")
 print(f"\033[1;4;32;40m{script_name}.c GENERATED!\033[m")
 
+# Compiling using GCC
 os.system(f"gcc {script_name}.c -I{config['include']} -lpython{python_version} -o {config['output']}")
 print(f"\033[1;4;32;40mCOMPILATION END!\033[m")

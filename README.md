@@ -3,6 +3,7 @@
 
 # How to Use
  Support: Windows, Linux and Mac
+ Requirements: GCC(MingW in Windows), Python >= 3
 
  1. Download PyCyCompiler Repository
  2. Open `config.json`
@@ -17,3 +18,7 @@
  7. Open the folder in terminal
  8. In terminal insert: `python pycycompiler.py script.py`. In `script.py` insert your script name
  9. Run the output executable!
+
+# Features
+ - Compiling Python to C - Released
+ - GCC Cross Compiling - DEBUG
