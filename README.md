@@ -3,7 +3,10 @@
 
 # How to Use
  Support: Windows, Linux and Mac
+
  Requirements: GCC(MingW in Windows), Python >= 3
+ 
+ Get GCC on Linux: `sudo apt-get install gcc`
 
  1. Download PyCyCompiler Repository
  2. Open `config.json`
