@@ -2,6 +2,12 @@ import sys
 import os
 import pip
 import json
+from distutils.util import strtobool
+from distutils.spawn import find_executable
+
+if not find_executable("gcc"):
+    print("\033[1;4;31;40mGCC is necessary to use this program.\033[m")
+    exit(1)
 
 # getting args
 args = sys.argv
@@ -14,8 +20,20 @@ python_version = config['python_version']
 
 # installing cython
 print("\033[1;4;32;40mINSTALLING CYTHON MODULE, PLEASE WAIT...\033[m")
-pip.main(["install", "cython"])
-print("\033[1;4;32;40mCYTHON MODULE SUCCESSFULLY INSTALLED!\033[m")
+if "cython" in sys.modules:
+    print("\033[1;4;32;40mCYTHON MODULE ALREADY INSTALLED!\033[m")
+else:
+    print("\033[1;4;31;40mCYTHON MODULE NOT FOUND!\033[m")
+
+    option = input("\t- \033[1;4;33;40mDO YOU INSTALL IT? [Y/N]\033[m ")
+    option = strtobool(option)
+
+    if not option:
+        print("\033[1;4;31;40mCYTHON is necessary to use this program.\033[m")
+        exit(0)
+
+    pip.main(["install", "cython"])
+    print("\033[1;4;32;40mCYTHON MODULE SUCCESSFULLY INSTALLED!\033[m")
 
 # compiling with cython
 print(f"\033[1;4;32;40mCYTHON MODULE COMPILING {script}, PLEASE WAIT...\033[m")
