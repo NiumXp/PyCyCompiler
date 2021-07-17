@@ -1,13 +1,19 @@
 # PyCyCompiler
  Python Compiler Using Cython and GCC
-
-# How to Use
+ 
  Support: Windows, Linux and Mac
 
  Requirements: GCC(MingW in Windows), Python >= 3
  
  Get GCC on Linux: `sudo apt-get install gcc`
 
+ License: MIT LICENSE
+
+# Features
+ - Compiling Python to C - Released
+ - GCC Cross Compiling - DEBUG
+
+# How to Use
  1. Download PyCyCompiler Repository
  2. Open `config.json`
  3. In `config.json` modify the field `"include":"",` to path python include path
@@ -21,7 +27,3 @@
  7. Open the folder in terminal
  8. In terminal insert: `python pycycompiler.py script.py`. In `script.py` insert your script name
  9. Run the output executable!
-
-# Features
- - Compiling Python to C - Released
- - GCC Cross Compiling - DEBUG
